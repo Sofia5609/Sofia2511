@@ -19,7 +19,7 @@ int main() {
        }
        char resstring[14];
        if((fd = open("wrfile.txt",O_RDONLY)) <0) {
-              printf("Ошибка при открытии файла на чтение\n);
+              printf("Ошибка при открытии файла на чтение\n");
               exit(-1);
        }
        size = read(fd, resstring, 14);
@@ -28,16 +28,9 @@ int main() {
                exit(-1);
        }
        else printf("Прочитанная строка: %s\n", resstring);
-       if (close(fd) < 0 {
+       if (close(fd) < 0) {
                printf("Не получилось закрыть файл\n");
                exit(-1);
-       }
-       return 0;
-}
-       else printf ("Строка записана в файл\n");
-       if (close(fd) < 0) {
-                printf("Не получилось закрыть файл\n");
-                exit(-1);
        }
        return 0;
 }
